@@ -1,0 +1,11 @@
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\bin\Debug\netcoreapp2.0\Backend.deps.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\bin\Debug\netcoreapp2.0\Backend.runtimeconfig.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\bin\Debug\netcoreapp2.0\Backend.runtimeconfig.dev.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\bin\Debug\netcoreapp2.0\Backend.dll
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\bin\Debug\netcoreapp2.0\Backend.pdb
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.csprojResolveAssemblyReference.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.csproj.CoreCompileInputs.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.AssemblyInfoInputs.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.AssemblyInfo.cs
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.dll
+E:\year4\trym1\Newtonideas\timetracker\proxy\Backend\Backend\obj\Debug\netcoreapp2.0\Backend.pdb
