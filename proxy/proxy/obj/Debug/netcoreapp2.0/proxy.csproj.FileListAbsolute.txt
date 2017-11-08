@@ -1,0 +1,11 @@
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.deps.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.runtimeconfig.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.runtimeconfig.dev.json
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.dll
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.pdb
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.csprojResolveAssemblyReference.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.csproj.CoreCompileInputs.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.AssemblyInfoInputs.cache
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.AssemblyInfo.cs
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.dll
+E:\year4\trym1\Newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.pdb
