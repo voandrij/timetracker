@@ -8,7 +8,7 @@ namespace proxy.Services
 {
     public class ExtranetUsersRepository : IUserRepository
     {
-        public User Create(User task)
+        public void Create(User task)
         {
             throw new NotImplementedException();
         }
@@ -18,7 +18,7 @@ namespace proxy.Services
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public IEnumerable<User> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,7 @@ namespace proxy.Services
             throw new NotImplementedException();
         }
 
-        public User Update(User task)
+        public void Update(User task)
         {
             throw new NotImplementedException();
         }

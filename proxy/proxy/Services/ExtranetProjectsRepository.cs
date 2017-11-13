@@ -10,8 +10,8 @@ namespace proxy.Services
 {
     public class ExtranetProjectsRepository : IProjectRepository
     {
-        
-        public List<Project> GetAll()
+
+        public IEnumerable<Project> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -19,11 +19,11 @@ namespace proxy.Services
         {
             throw new NotImplementedException();
         }
-        public Project Create(Project project)
+        public void Create(Project project)
         {
             throw new NotImplementedException();
         }
-        public Project Update(Project project)
+        public void Update(Project project)
         {
             throw new NotImplementedException();
         }

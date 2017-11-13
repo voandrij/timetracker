@@ -13,24 +13,29 @@ namespace proxy.Controllers
     [Route("api/[controller]")]
     public class TimelogsController : Controller
     {
-        ITimelogRepository timelogRepository;
+        private readonly ITimelogRepository _timelogRepository;
+
+        public TimelogsController(ITimelogRepository timelogRepository)
+        {
+            _timelogRepository = timelogRepository;
+        }
 
         [HttpGet]
         public IEnumerable<Timelog> GetAll()
         {
-            return this.timelogRepository.GetAll();
+            return this._timelogRepository.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetTimelog")]
         public IActionResult GetById(int id)
         {
-            return new ObjectResult(this.timelogRepository.GetById(id));
+            return new ObjectResult(this._timelogRepository.GetById(id));
         }
 
         [HttpPost]
         public IActionResult Create([FromBody]Timelog timelog)
         {
-            return CreatedAtRoute("GetTimelog", new { id = timelog.Id }, this.timelogRepository.Create(timelog));
+            return Ok(timelog);
         }
 
         [HttpPut("{id}")]

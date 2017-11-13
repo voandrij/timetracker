@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace proxy.Services
 {
-    interface IProjectRepository
+    public interface IProjectRepository
     {
-        List<Project> GetAll();
+        IEnumerable<Project> GetAll();
         Project GetById(long id);
-        Project Create(Project project);
-        Project Update(Project project);
+        void Create(Project project);
+        void Update(Project project);
         void Delete(long id);
     }
 }

@@ -8,7 +8,7 @@ namespace proxy.Services
 {
     public class ExtranetTimelogsRepository : ITimelogRepository
     {
-        public Timelog Create(Timelog timelog)
+        public void Create(Timelog timelog)
         {
             throw new NotImplementedException();
         }
@@ -18,7 +18,7 @@ namespace proxy.Services
             throw new NotImplementedException();
         }
 
-        public List<Timelog> GetAll()
+        public IEnumerable<Timelog> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,7 @@ namespace proxy.Services
             throw new NotImplementedException();
         }
 
-        public Timelog Update(Timelog timelog)
+        public void Update(Timelog timelog)
         {
             throw new NotImplementedException();
         }

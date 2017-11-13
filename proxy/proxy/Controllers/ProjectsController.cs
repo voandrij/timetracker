@@ -13,24 +13,29 @@ namespace proxy.Controllers
     [Route("api/[controller]")]
     public class ProjectsController : Controller
     {
-        IProjectRepository projectRepository;
+        private readonly IProjectRepository _projectRepository;
+
+        public ProjectsController(IProjectRepository projectRepository)
+        {
+            _projectRepository = projectRepository;
+        }
 
         [HttpGet]
         public IEnumerable<Project> GetAll()
         {
-            return this.projectRepository.GetAll();
+            return this._projectRepository.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetProject")]
         public IActionResult GetById(int id)
         {
-            return new ObjectResult(this.projectRepository.GetById(id));
+            return new ObjectResult(this._projectRepository.GetById(id));
         }
 
         [HttpPost]
         public IActionResult Create([FromBody]Project project)
         {
-            return CreatedAtRoute("GetProject", new { id = project.Id}, this.projectRepository.Create(project));
+            return Ok(project);
         }
 
         [HttpPut("{id}")]

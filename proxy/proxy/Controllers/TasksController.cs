@@ -12,24 +12,29 @@ namespace proxy.Controllers
     [Route("api/[controller]")]
     public class TasksController : Controller
     {
-        ITaskRepository taskRepository;
+        private readonly ITaskRepository _taskRepository;
+
+        public TasksController(ITaskRepository taskRepository)
+        {
+            _taskRepository = taskRepository;
+        }
 
         [HttpGet]
         public IEnumerable<Task> GetAll()
         {
-            return this.taskRepository.GetAll();
+            return this._taskRepository.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetTask")]
         public IActionResult GetById(int id)
         {
-            return new ObjectResult(this.taskRepository.GetById(id));
+            return new ObjectResult(this._taskRepository.GetById(id));
         }
 
         [HttpPost]
         public IActionResult Create([FromBody]Task task)
         {
-            return CreatedAtRoute("GetTask", new { id = task.Id }, this.taskRepository.Create(task));
+            return Ok(task);
         }
 
         [HttpPut("{id}")]

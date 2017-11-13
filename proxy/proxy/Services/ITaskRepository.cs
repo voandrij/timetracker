@@ -5,12 +5,12 @@ using proxy.Models;
 
 namespace proxy.Services
 {
-    interface ITaskRepository
+    public interface ITaskRepository
     {
-        List<Task> GetAll();
+        IEnumerable<Task> GetAll();
         Task GetById(long id);
-        Task Create(Task task);
-        Task Update(Task task);
+        void Create(Task task);
+        void Update(Task task);
         void Delete(long id);
     }
 }

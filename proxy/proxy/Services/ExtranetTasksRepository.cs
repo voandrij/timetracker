@@ -7,7 +7,7 @@ namespace proxy.Services
 {
     public class ExtranetTasksRepository : ITaskRepository
     {
-        public List<Task> GetAll()
+        public IEnumerable<Task> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -16,11 +16,11 @@ namespace proxy.Services
         {
             throw new NotImplementedException();
         }
-        public Task Create(Task task)
+        public void Create(Task task)
         {
             throw new NotImplementedException();
         }
-        public Task Update(Task task)
+        public void Update(Task task)
         {
             throw new NotImplementedException();
         }

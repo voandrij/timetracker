@@ -13,24 +13,29 @@ namespace proxy.Controllers
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
-        IUserRepository userRepository;
+        private readonly IUserRepository _userRepository;
+
+        public UsersController(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
 
         [HttpGet]
         public IEnumerable<User> GetAll()
         {
-            return this.userRepository.GetAll();
+            return this._userRepository.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetUser")]
         public IActionResult GetById(int id)
         {
-            return new ObjectResult(this.userRepository.GetById(id));
+            return new ObjectResult(this._userRepository.GetById(id));
         }
 
         [HttpPost]
         public IActionResult Create([FromBody]User user)
         {
-            return CreatedAtRoute("GetUser", new { id = user.Id }, this.userRepository.Create(user));
+            return Ok(user);
         }
 
         [HttpPut("{id}")]

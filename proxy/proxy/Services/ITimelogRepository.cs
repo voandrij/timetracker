@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace proxy.Services
 {
-    interface ITimelogRepository
+    public interface ITimelogRepository
     {
-        List<Timelog> GetAll();
+        IEnumerable<Timelog> GetAll();
         Timelog GetById(long id);
-        Timelog Create(Timelog timelog);
-        Timelog Update(Timelog timelog);
+        void Create(Timelog timelog);
+        void Update(Timelog timelog);
         void Delete(long id);
     }
 }

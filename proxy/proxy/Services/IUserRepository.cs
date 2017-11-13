@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace proxy.Services
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
-        List<User> GetAll();
+        IEnumerable<User> GetAll();
         User GetById(long id);
-        User Create(User user);
-        User Update(User user);
+        void Create(User user);
+        void Update(User user);
         void Delete(long id);
     }
 }
