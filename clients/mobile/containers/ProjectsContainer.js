@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { View, Text, Picker } from 'react-native'
 import { connect } from 'react-redux'
-import { fetchTimelogs } from '../actions/timelogs'
-import Timelogs from '../components/Timelogs'
+import { fetchProjects } from '../actions/projects'
+import Projects from '../components/Projects'
 import PropTypes from 'prop-types';
 
-class TimelogsContainer extends React.Component {
+class ProjectsContainer extends React.Component {
 	constructor(props) {
 		super(props)
 		this.handleRefreshClick = this.handleRefreshClick.bind(this)
@@ -13,24 +13,24 @@ class TimelogsContainer extends React.Component {
 
 	componentDidMount() {
 		const { dispatch } = this.props
-		dispatch(fetchTimelogs())
+		dispatch(fetchProjects())
 	}
 
 	handleRefreshClick(e) {
 		e.preventDefault()
 		const { dispatch} = this.props
-		dispatch(fetchTimelogs())
+		dispatch(fetchProjects())
 	}
 
 	render() {
-		const { timelogs, isFetching} = this.props
+		const { projects, isFetching} = this.props
 		return (
 			<View>
-				{isFetching && timelogs.length === 0 && <Text>Loading...</Text> }
-				{!isFetching && timelogs.length === 0 && <Text>Empty.</Text> }
-				{timelogs.length > 0 &&
+				{isFetching && projects.length === 0 && <Text>Loading...</Text> }
+				{!isFetching && projects.length === 0 && <Text>Empty.</Text> }
+				{projects.length > 0 &&
 				<View style={{ opacity: isFetching ? 0.5 : 1 }}>
-					<Timelogs timelogs={timelogs} />
+					<Projects projects={projects} />
 				</View>
 				}
 			</View>
@@ -39,25 +39,25 @@ class TimelogsContainer extends React.Component {
 	}
 }
 
-TimelogsContainer.propTypes = {
-	timelogs: PropTypes.array.isRequired,
+ProjectsContainer.propTypes = {
+	projects: PropTypes.array.isRequired,
 	isFetching: PropTypes.bool.isRequired,
 	dispatch: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
-	const { timelogsReducer } = state
+	const { projectsReducer } = state
 	const {
 		isFetching,
-		items: timelogs
-	} = timelogsReducer || {
+		items: projects
+	} = projectsReducer || {
 		isFetching: true,
 		items: []
 	}
 	return {
-		timelogs,
+		projects,
 		isFetching
 	}
 }
 
-export default connect(mapStateToProps)(TimelogsContainer)
+export default connect(mapStateToProps)(ProjectsContainer)
