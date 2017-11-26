@@ -25,14 +25,16 @@ class TimelogsContainer extends React.Component {
 	render() {
 		const { timelogs, isFetching} = this.props
 		return (
-			<View>
-				{isFetching && timelogs.length === 0 && <Text>Loading...</Text> }
-				{!isFetching && timelogs.length === 0 && <Text>Empty.</Text> }
-				{timelogs.length > 0 &&
-				<View style={{ opacity: isFetching ? 0.5 : 1 }}>
-					<Timelogs timelogs={timelogs} />
+			<View style = {styles.container}>
+				<View>
+					{isFetching && timelogs.length === 0 && <Text>Loading...</Text> }
+					{!isFetching && timelogs.length === 0 && <Text>Empty.</Text> }
+					{timelogs.length > 0 &&
+					<View style={{ opacity: isFetching ? 0.5 : 1 }}>
+						<Timelogs timelogs={timelogs} />
+					</View>
+					}
 				</View>
-				}
 			</View>
 
 		)

@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import {
 	REQUEST_TIMELOGS, RECEIVE_TIMELOGS
 } from '../actions/timelogs'

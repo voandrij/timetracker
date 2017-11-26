@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import {
 	REQUEST_TASKS, RECEIVE_TASKS
 } from '../actions/tasks'
