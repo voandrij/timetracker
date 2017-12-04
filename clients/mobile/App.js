@@ -44,7 +44,7 @@ export default class App extends React.Component {
 				  <Scene key="mainPage" component={MainPageContainer} title="MainPage"/>
 				  <Scene key="timelogs" component={TimelogsContainer} title="Timelogs"/>
 				  <Scene key="footer" component={FooterContainer} title="Footer"/>
-				  <Scene key="addingTime" component={AddingTimeContainer} title="AddingTime"/>
+				  <Scene key="addingTime" component={AddingTimeContainer} title="Manual Time"/>
 				  <Scene key="addingTimeTracker" component={AddingTimeTrackerContainer} title="AddingTimeTracker"/>
 				  <Scene key="editingTime" component={EditingTimeContainer} title="EditingTime"/>
 				  <Scene key="timeTracker" component={TimeTrackerContainer} title="TimeTracker"/>
