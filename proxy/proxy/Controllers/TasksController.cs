@@ -4,8 +4,6 @@ using System.Linq;
 using proxy.Models;
 using Microsoft.AspNetCore.Mvc;
 using proxy.Services;
-using System.Net.Http;
-using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,36 +20,13 @@ namespace proxy.Controllers
         }
 
         [HttpGet]
-        public async System.Threading.Tasks.Task<IEnumerable<Task>> GetAll()
+        public IEnumerable<Task> GetAll()
         {
-            return await this._taskRepository.GetAll();
-        }
-
-        [HttpGet("[action]/{city}")]
-        public async System.Threading.Tasks.Task<IActionResult> City(string city)
-        {
-            using (var client = new HttpClient())
-            {
-
-                client.BaseAddress = new Uri("http://api.openweathermap.org");
-                var response = await client.GetAsync($"/data/2.5/weather?q={city}&appid=f29394556f9216314773f6bc03ff2b08&units=metric");
-                response.EnsureSuccessStatusCode();
-
-                var stringResult = await response.Content.ReadAsStringAsync();
-                var rawWeather = JsonConvert.DeserializeObject<OpenWeatherResponse>(stringResult);
-                return Ok(new
-                {
-                    Temp = rawWeather.Main.Temp,
-                    Summary = string.Join(",", rawWeather.Weather.Select(x => x.Main)),
-                    City = rawWeather.Name
-                });
-
-
-            }
+            return this._taskRepository.GetAll();
         }
 
         [HttpGet("{id}", Name = "GetTask")]
-        public IActionResult GetById(string id)
+        public IActionResult GetById(int id)
         {
             return new ObjectResult(this._taskRepository.GetById(id));
         }
@@ -63,13 +38,13 @@ namespace proxy.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody]Task task)
+        public IActionResult Update(int id, [FromBody]Task task)
         {
             return new NoContentResult();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public IActionResult Delete(int id)
         {
             return new NoContentResult();
         }
