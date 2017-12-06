@@ -23,9 +23,9 @@ namespace proxy.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<string> Authenticate([FromBody] User user)
+        public async Task<string> Authenticate(string login, string password)
         {
-           return await this._userRepository.Authenticate(user.Username, user.Password);
+           return await this._userRepository.Authenticate(login, password);
         }
 
         [HttpGet]
