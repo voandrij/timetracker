@@ -2,4 +2,4 @@
 cls
 SET var=%cd%
 cd C:\Users\Administrator\Downloads
-nuget restore %cd%\proxy\proxy.sln
+nuget restore %var%\proxy\proxy.sln
