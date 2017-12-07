@@ -2,7 +2,7 @@
 cls
 SET var=%cd%
 cd C:\Users\Administrator\Downloads
-nuget restore %cd%\proxy\proxy.sln
+nuget restore $Source.tti_global_repo$\proxy\proxy.sln
 
 cd C:\Windows\Microsoft.NET\Framework\v4.0.30319\
-msbuild %cd%\proxy\proxy.sln
+msbuild $Source.tti_global_repo$\proxy\proxy.sln
