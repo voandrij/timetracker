@@ -1,3 +1,3 @@
 @echo off
 cls
-nuget restore proxy.sln
+C:\Users\Administrator\Downloads\nuget restore proxy.sln
