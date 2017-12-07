@@ -7,7 +7,7 @@ namespace proxy.Services
 {
     public interface ITaskRepository
     {
-        IEnumerable<Task> GetAll();
+        System.Threading.Tasks.Task<IEnumerable<Task>> GetAll();
         Task GetById(long id);
         void Create(Task task);
         void Update(Task task);

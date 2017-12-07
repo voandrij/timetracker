@@ -15,13 +15,18 @@ namespace proxy.Services
     {
 
         const string DOMAIN = "https://extranet.newtonideas.com/";
+        public static Dictionary<string, string> authCookie;
+        public static Dictionary<string, string> AuthCookie {
+            get { return authCookie; }
+            private set { authCookie = value; }
+        }
 
-        public async Task<string> Authenticate(string login, string password)
+        public async Task<Dictionary<string, string>> Authenticate(string login, string password)
         {
 
             const string URI = DOMAIN + "Login.aspx";
 
-            string authCookie;
+            AuthCookie = new Dictionary<string, string>();
 
             HttpClientHandler handler = new HttpClientHandler();
             using (var client = new HttpClient(handler))
@@ -42,10 +47,11 @@ namespace proxy.Services
                 if (cookies[".auth"] is null)
                     throw new UnauthorizedAccessException("Invalid login/password");
 
-                authCookie = cookies[".auth"].Value;
+                AuthCookie.Add("ASP.NET_SessionId", cookies["ASP.NET_SessionId"].Value);
+                AuthCookie.Add(".auth", cookies[".auth"].Value);
             }
 
-            return authCookie;
+            return AuthCookie;
 
         }
 

@@ -1,0 +1,11 @@
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.csprojResolveAssemblyReference.cache
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.csproj.CoreCompileInputs.cache
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.AssemblyInfoInputs.cache
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.AssemblyInfo.cs
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.deps.json
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.runtimeconfig.json
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.runtimeconfig.dev.json
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.dll
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\bin\Debug\netcoreapp2.0\proxy.pdb
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.dll
+D:\NEW_ORDER\uni\4\newtonideas\timetracker\proxy\proxy\obj\Debug\netcoreapp2.0\proxy.pdb

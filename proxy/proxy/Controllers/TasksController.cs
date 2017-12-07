@@ -20,7 +20,7 @@ namespace proxy.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Task> GetAll()
+        public System.Threading.Tasks.Task<IEnumerable<Task>> GetAll()
         {
             return this._taskRepository.GetAll();
         }
