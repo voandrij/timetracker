@@ -1,5 +1,4 @@
 @echo off
 cls
 C:\Users\Administrator\Downloads\nuget restore proxy.sln
-
-"C:\Windows\Microsoft.NET\Framework64\v3.5\MSBuild.exe" proxy.sln
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin\MSBuild.exe" proxy.sln
