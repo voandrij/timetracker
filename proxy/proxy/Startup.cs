@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using proxy.Services;
+using Microsoft.EntityFrameworkCore;
+using proxy.Data;
 
 namespace proxy
 {
@@ -30,6 +32,9 @@ namespace proxy
             services.AddTransient<ITaskRepository, ExtranetTasksRepository>();
             services.AddTransient<ITimelogRepository, ExtranetTimelogsRepository>();
             services.AddTransient<IUserRepository, ExtranetUsersRepository>();
+
+            services.AddDbContext<AccessTokenContext>(options =>
+                    options.UseSqlite("DataSource=E:/year4/trym1/Newtonideas/timetracker/proxy/AccessTokensDB.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
