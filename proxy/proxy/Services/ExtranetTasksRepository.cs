@@ -5,14 +5,11 @@ using proxy.Models;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 
-namespace proxy.Services
-{
-    public class ExtranetTasksRepository : ITaskRepository
-    {
-        public IEnumerable<Task> GetAll()
-        {
-            using (var client = new HttpClient())
-            {
+namespace proxy.Services {
+    public class ExtranetTasksRepository : ITaskRepository {
+        public IEnumerable<Task> GetAll() {
+            using (var client = new HttpClient()) {
+
                 List<Task> tasks = new List<Task>();
 
                 //Retrieving a JSON-Object
@@ -32,15 +29,12 @@ namespace proxy.Services
             }
         }
 
-        public Task GetById(string id)
-        {
+        public Task GetById(string id) {
             var allTasks = GetAll();
-            foreach (Task t in allTasks)
-            {
-                if (t.Id == id)
-                {
+            foreach (Task t in allTasks) {
+                if (t.Id == id) {
                     return t;
-                }
+                }  
             }
             return null;
         }
@@ -52,8 +46,7 @@ namespace proxy.Services
         {
             throw new NotImplementedException();
         }
-        public void Delete(string id)
-        {
+        public void Delete(string id) {
             throw new NotImplementedException();
         }
     }

@@ -9,9 +9,9 @@ namespace proxy.Services
     public interface ITimelogRepository
     {
         IEnumerable<Timelog> GetAll();
-        Timelog GetById(long id);
+        Timelog GetById(string id);
         void Create(Timelog timelog);
         void Update(Timelog timelog);
-        void Delete(long id);
+        void Delete(string id);
     }
 }

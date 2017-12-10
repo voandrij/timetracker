@@ -28,8 +28,7 @@ namespace proxy.Services
             cookie += "; ASP.NET_SessionId=" + AuthCookie["ASP.NET_SessionId"] + "; .auth=" + AuthCookie[".auth"];
         }
 
-        public static async System.Threading.Tasks.Task<string> getResponseAsString(string requestUri)
-        {
+        public static async System.Threading.Tasks.Task<string> getResponseAsString(string requestUri) {
             using (var client = new HttpClient())
             {
                 //var cookieId = ExtranetUsersRepository.AuthCookie;

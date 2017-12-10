@@ -9,9 +9,9 @@ namespace proxy.Services
     public interface IProjectRepository
     {
         IEnumerable<Project> GetAll();
-        Project GetById(long id);
+        Project GetById(string id);
         void Create(Project project);
         void Update(Project project);
-        void Delete(long id);
+        void Delete(string id);
     }
 }
