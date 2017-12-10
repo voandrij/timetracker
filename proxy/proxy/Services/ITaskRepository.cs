@@ -7,10 +7,10 @@ namespace proxy.Services
 {
     public interface ITaskRepository
     {
-        System.Threading.Tasks.Task<IEnumerable<Task>> GetAll();
-        Task GetById(long id);
+        IEnumerable<Task> GetAll();
+        Task GetById(string id);
         void Create(Task task);
         void Update(Task task);
-        void Delete(long id);
+        void Delete(string id);
     }
 }

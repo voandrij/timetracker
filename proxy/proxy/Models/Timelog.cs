@@ -8,7 +8,7 @@ namespace proxy.Models
 {
     public class Timelog
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public DateTime TimeStarted { get; set; }
         public DateTime TimeFinished { get; set; }
         [Required]

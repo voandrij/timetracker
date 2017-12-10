@@ -16,9 +16,39 @@ namespace proxy.Services
 
         const string DOMAIN = "https://extranet.newtonideas.com/";
         public static Dictionary<string, string> authCookie;
-        public static Dictionary<string, string> AuthCookie {
+        public static Dictionary<string, string> AuthCookie
+        {
             get { return authCookie; }
             private set { authCookie = value; }
+        }
+
+        public static void AddAuthorizationInfo(ref string cookie)
+        {
+            cookie.Trim();
+            cookie += "; ASP.NET_SessionId=" + AuthCookie["ASP.NET_SessionId"] + "; .auth=" + AuthCookie[".auth"];
+        }
+
+        public static async System.Threading.Tasks.Task<string> getResponseAsString(string requestUri) {
+            using (var client = new HttpClient())
+            {
+                //var cookieId = ExtranetUsersRepository.AuthCookie;
+                //System.Diagnostics.Debug.WriteLine("\n\nSession ID: \t" + cookieId["ASP.NET_SessionId"] + "\nAuthorization Token: \t" + cookieId[".auth"] + "\n\n");
+
+                client.BaseAddress = new Uri("https://extranet.newtonideas.com");
+                client.DefaultRequestHeaders.Accept.Clear();
+
+                //Setting Cookie
+                string cookie = "XCMWSERV = default; require_ssl=true; language_code=en-US;";
+                ExtranetUsersRepository.AddAuthorizationInfo(ref cookie);
+                client.DefaultRequestHeaders.Add("Cookie", cookie);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Getting Response
+                var response = await client.GetAsync(requestUri);
+                response.EnsureSuccessStatusCode();
+                var stringResult = await response.Content.ReadAsStringAsync();
+                return stringResult;
+            }
         }
 
         public async Task<Dictionary<string, string>> Authenticate(string login, string password)
@@ -73,6 +103,7 @@ namespace proxy.Services
 
             return inputs;
         }
+
         public void Create(User task)
         {
             throw new NotImplementedException();
