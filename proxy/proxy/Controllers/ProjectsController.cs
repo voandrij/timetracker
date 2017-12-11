@@ -27,7 +27,7 @@ namespace proxy.Controllers
         }
 
         [HttpGet("{id}", Name = "GetProject")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             return new ObjectResult(this._projectRepository.GetById(id));
         }
@@ -39,13 +39,13 @@ namespace proxy.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Project project)
+        public IActionResult Update(string id, [FromBody]Project project)
         {
             return new NoContentResult();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             return new NoContentResult();
         }
