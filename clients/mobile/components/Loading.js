@@ -7,7 +7,7 @@ import styles from '../resources/styles'
 export default class Loading extends React.Component {
 	render() {
 		return (
-			<View>
+			<View style={styles.container}>
 				<Image
 					style={styles.logo}
 					source={require('../resources/img/Logo.png')}

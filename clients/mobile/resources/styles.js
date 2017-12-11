@@ -44,7 +44,6 @@ export default styles = StyleSheet.create({
 	buttonBackground: {
 		flex: 0.15,
 		alignItems: 'center',
-		backgroundColor: '#fff',
 		padding: 10
 	},
 	saveButton: {
@@ -54,5 +53,5 @@ export default styles = StyleSheet.create({
 		width: 120,
 		height: 50
 	}
-	
+
 });

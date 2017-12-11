@@ -7,9 +7,7 @@ export default class extends React.Component {
 	render() {
 		return (
 			<View style = {styles.container}>
-				<View>
 					<Loading/>
-				</View>
 			</View>
 
 		)

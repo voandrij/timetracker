@@ -1,0 +1,19 @@
+const Application  = StackNavigator({
+    Home: { screen: Login },
+    Profile: { screen: Profile }
+  }, {
+       navigationOptions: {
+           header: false,
+       }
+});
+
+
+/* Should me called like that
+export default class App extends React.Component {
+    render() {
+        return (
+           <Application />
+        );
+    }
+}
+*/
