@@ -31,9 +31,9 @@ class EditingTimeContainer extends React.Component {
 	state = {
 		isStartDateTimePickerVisible: false,
 		isEndDateTimePickerVisible: false,
-		startDate: new Date(2017, 11, 11, 1, 1),
-		endDate: new Date(2017, 11, 11, 11, 11),
-		difference: new Date(2017, 11, 11, 10, 10)
+		startDate: new Date(2017, 12, 12, 1, 1),
+		endDate: new Date(2017, 12, 12, 11, 11),
+		difference: new Date(2017, 12, 12, 10, 10)
 	};
 
 	_showStartDateTimePicker = () => this.setState({ isStartDateTimePickerVisible: true });
@@ -47,15 +47,19 @@ class EditingTimeContainer extends React.Component {
 
 	_handleStartDatePicked = (date) => {
 		console.log('A date has been picked: ', date);
-		this.setState({ startDate: date });
-		this._updateDifference();
+		if(date<this.state.endDate) {
+			this.setState({startDate: date});
+			this._updateDifference();
+		}
 		this._hideStartDateTimePicker();
 	};
 
 	_handleEndDatePicked = (date) => {
 		console.log('A date has been picked: ', date);
-		this.setState({ endDate: date });
-		this._updateDifference();
+		if(date>this.state.startDate) {
+			this.setState({endDate: date});
+			this._updateDifference();
+		}
 		this._hideEndDateTimePicker();
 	};
 

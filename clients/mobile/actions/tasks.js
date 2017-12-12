@@ -20,6 +20,40 @@ export function fetchTasks() {
 		return fetch(`http://www.mocky.io/v2/5a0220ca3300001a13f6ee58`)
 			.then(response => response.json())
 			.then(json => dispatch(receiveTasks(json)))
+			.catch((error) => {
+				console.error(error);
+			})
 	}
+}
+
+export function newTask(task, projectId) {
+	fetch('https://timetracker.com/projects/'+projectId+'/tasks', {
+		method: 'POST',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(task),
+	});
+}
+
+export function deleteTask(id, projectId) {
+	fetch('https://timetracker.com/projects'+projectId+'/tasks'+id, {
+		method: 'DELETE',
+		headers: {
+			Accept: 'application/json'
+		}
+	});
+}
+
+export function editTask(id, task, projectId) {
+	fetch('https://timetracker.com/projects'+projectId+'/tasks'+id, {
+		method: 'PUT',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(task),
+	});
 }
 
