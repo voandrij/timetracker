@@ -26,7 +26,7 @@ namespace proxy.Controllers
         }
 
         [HttpGet("{id}", Name = "GetTask")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             return new ObjectResult(this._taskRepository.GetById(id));
         }
@@ -38,13 +38,13 @@ namespace proxy.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Task task)
+        public IActionResult Update(string id, [FromBody]Task task)
         {
             return new NoContentResult();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             return new NoContentResult();
         }

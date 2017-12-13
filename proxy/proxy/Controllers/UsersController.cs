@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using proxy.Services;
 using proxy.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,6 +20,12 @@ namespace proxy.Controllers
         public UsersController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
+        }
+
+        [HttpPost("[action]")]
+        public async Task<Dictionary<string, string>> Authenticate(string login, string password)
+        {
+            return await this._userRepository.Authenticate(login, password);
         }
 
         [HttpGet]

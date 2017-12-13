@@ -8,13 +8,16 @@ namespace proxy.Models
 {
     public class Task
     {
-        public long Id { get; set; }
+        [Required]
+        public string Id { get; set; }
+        [Required]
+        public string Project_id { get; set; }
         public int SeqNumber { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         [Required]
-        public string Status { get; set; }
+        public string State { get; set; }
         [Required]
         public string Priority { get; set; }
     }

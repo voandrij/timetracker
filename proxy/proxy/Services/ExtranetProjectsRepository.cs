@@ -15,7 +15,7 @@ namespace proxy.Services
         {
             throw new NotImplementedException();
         }
-        public Project GetById(long id)
+        public Project GetById(string id)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace proxy.Services
         {
             throw new NotImplementedException();
         }
-        public void Delete(long id)
+        public void Delete(string id)
         {
             throw new NotImplementedException();
         }

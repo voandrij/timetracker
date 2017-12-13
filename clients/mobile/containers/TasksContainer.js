@@ -25,16 +25,17 @@ class TasksContainer extends React.Component {
 	render() {
 		const { tasks, isFetching} = this.props
 		return (
-			<View>
-				{isFetching && tasks.length === 0 && <Text>Loading...</Text> }
-				{!isFetching && tasks.length === 0 && <Text>Empty.</Text> }
-				{tasks.length > 0 &&
-				<View style={{ opacity: isFetching ? 0.5 : 1 }}>
-					<Tasks tasks={tasks} />
+			<View style = {styles.container}>
+				<View>
+					{isFetching && tasks.length === 0 && <Text>Loading...</Text> }
+					{!isFetching && tasks.length === 0 && <Text>Empty.</Text> }
+					{tasks.length > 0 &&
+					<View style={{ opacity: isFetching ? 0.5 : 1 }}>
+						<Tasks tasks={tasks} />
+					</View>
+					}
 				</View>
-				}
 			</View>
-
 		)
 	}
 }

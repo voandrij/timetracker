@@ -3,7 +3,9 @@ import { View, Text, Picker } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchProjects } from '../actions/projects'
 import Projects from '../components/Projects'
+import Loading from '../components/Loading'
 import PropTypes from 'prop-types';
+import styles from '../resources/styles';
 
 class ProjectsContainer extends React.Component {
 	constructor(props) {
@@ -25,14 +27,17 @@ class ProjectsContainer extends React.Component {
 	render() {
 		const { projects, isFetching} = this.props
 		return (
-			<View>
-				{isFetching && projects.length === 0 && <Text>Loading...</Text> }
-				{!isFetching && projects.length === 0 && <Text>Empty.</Text> }
-				{projects.length > 0 &&
-				<View style={{ opacity: isFetching ? 0.5 : 1 }}>
-					<Projects projects={projects} />
+
+			<View style = {styles.container}>
+				<View>
+					{isFetching && projects.length === 0 && <Loading/> }
+					{!isFetching && projects.length === 0 && <Text>Empty.</Text> }
+					{projects.length > 0 &&
+					<View style={{ opacity: isFetching ? 0.5 : 1 }}>
+						<Projects projects={projects} />
+					</View>
+					}
 				</View>
-				}
 			</View>
 
 		)

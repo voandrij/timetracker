@@ -8,9 +8,9 @@ namespace proxy.Services
     public interface ITaskRepository
     {
         IEnumerable<Task> GetAll();
-        Task GetById(long id);
+        Task GetById(string id);
         void Create(Task task);
         void Update(Task task);
-        void Delete(long id);
+        void Delete(string id);
     }
 }

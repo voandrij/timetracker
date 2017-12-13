@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import {
 	REQUEST_PROJECTS, RECEIVE_PROJECTS
 } from '../actions/projects'

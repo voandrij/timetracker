@@ -27,7 +27,7 @@ namespace proxy.Controllers
         }
 
         [HttpGet("{id}", Name = "GetTimelog")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             return new ObjectResult(this._timelogRepository.GetById(id));
         }
@@ -39,13 +39,13 @@ namespace proxy.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Timelog timelog)
+        public IActionResult Update(string id, [FromBody]Timelog timelog)
         {
             return new NoContentResult();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             return new NoContentResult();
         }
