@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Time Tracker</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.%D1%81ss">
+</head>
+<body>
+	
+<div class="container upper-line" id="main"><h1></h1></div>
+
+<div class="container">
+<div class="col-md-12">
+    <div class="form-area">  
+        <form role="form">
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">NEW TRACKER</h3>
+    				<div class="form-group">
+	    				<label>PROJECT</label>
+						<input type="text" class="form-control" id="name" name="name" placeholder="" required>
+					</div>
+					<div class="form-group">
+						<label>TASK</label>
+						<input type="text" class="form-control" id="email" name="email" placeholder="" required>
+					</div>
+					<div class="form-group">
+						<label>STATUS</label>
+						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="" required>
+					</div>
+                    <div class="form-group">
+	                    <label>DESCRIPTION</label>
+						<textarea class="form-control" type="textarea" id="message" placeholder="Please choose the task first" maxlength="140" rows="7"></textarea>                   
+                    </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<!-- Buttons -->
+<div class="container">
+	<div type="button" class="btn btn-primary tracking-btn">Start Tracking</div>
+</div>
+
+<div class="container footer-line">
+	<div class="current-task">TASK 1.2 Creating mockups</div>
+	<div class="current-task-time">01:12:34</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

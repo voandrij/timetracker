@@ -1,0 +1,189 @@
+#main{
+    background: #B7C4CA;
+    color:#fff;
+}
+
+section {
+  display: inline-block;
+  width: 50%;
+}
+
+.plaintext{
+	color: #26404C;
+	font: "Times New Roman";
+}
+
+/* Upper line styles */
+.upper-line{
+	width: 100%;
+	background: #B7C4CA;
+}
+
+/* Carousel styles */
+.carousel{
+    height:150px;
+}
+.carousel .item{
+    height:150px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.carousel .item .custom-caption{
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    padding:10% 0;
+    font-size:30px;
+    color:#fff;
+    font-weight:600;
+}
+
+.carousel .carousel-control.left,
+.carousel .carousel-control.right,
+.carousel .carousel-control.left:hover,
+.carousel .carousel-control.right:hover{
+    background:none;
+}
+
+.carousel .carousel-control{
+    width: 20px;
+    height:20px;
+    top:50%;
+}
+
+.carousel .carousel-control span{
+    position:relative;
+    left:0;
+}
+
+.custom-caption{
+	height: 300px;
+}
+
+/* Time block styles */
+.time-block-container{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.time-block{
+	float: left;
+	margin: 0 1.5%;
+}
+
+.time-block-line{
+	width: 90px;
+	height: 20px;
+	border-radius: 25px;
+	background: #B75858;;
+}
+
+/* Main Time Container */
+/* 12 and HOURS */
+.main-time-container{
+/* 	height: 270px;	 */
+padding-bottom: 20px;
+}
+
+.maintime-halfscreen{
+	float: left;
+	width: 50%;
+}
+.maintime-hours-container{
+	float: right;
+/* 	margin: 0 1.5%; */
+	margin: 0 auto;
+}
+
+.maintime-minutes-container{
+	padding-top: 20px;
+	float: left;
+/* 	margin: 0 1.5%; */
+	margin: 0 auto;
+}
+
+.main-hours-number{
+	font-size: 140px;
+	color: #B75858;
+	display: inline-block;
+	font-family: 'Times New Roman';
+    line-height: 140px;
+    height: 110px;
+}
+
+.main-hours-text{
+	font-size: 30px;
+	padding-left: 12px;
+}
+
+/* Minutes and seconds and so on */
+
+.main-time-number{
+	font-size: 40px;
+	color: #B75858;
+	display: inline-block;
+	font-family: 'Times New Roman';
+    line-height: 40px;
+    height: 30px;
+}
+
+.main-time-text{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.seconds-underline{
+	width: 100%;
+    height: 10px;
+    background: #B7C4CA;
+}
+
+.worked{
+	font-size: 30px;
+}
+
+.tracking-btn{
+	border-radius: 0px;
+	background: #26404C;
+	padding: 5px;
+	width: 200px;
+	margin-left: -100px;
+	left: 50%;
+	position: relative;
+}
+
+.btn-text{
+	font-size: 15px;
+	text-align: center;
+}
+
+.footer-line{
+	margin-top: 20px;
+	height: 60px;
+	width: 100%;
+	background: #B75858;
+}
+
+.current-task{
+	margin-top: 20px;
+	margin-left: 30px;
+	color: black;
+	float: left;
+	background: white;
+	border-radius: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+.current-task-time{
+	margin-top: 20px;
+	color: white;
+	float: right;
+	margin-right: 30px;
+}
